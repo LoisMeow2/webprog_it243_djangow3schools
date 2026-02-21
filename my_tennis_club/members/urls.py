@@ -18,8 +18,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
- 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('members/', views.members, name='members'),
+    # Change 'members/' to '' to make it the homepage
+    path('', views.members, name='members'), 
 ]
